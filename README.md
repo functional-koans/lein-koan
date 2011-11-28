@@ -28,7 +28,7 @@ To run the clojure-koans tests, try
 
 Lein-koan makes it easy to add koans to existing libraries.
 
-- Write some koans using the instructions at the [koan-engine github page](https://github.com/functional-koans/clojure-koan-engine)
+- Write some koans using the instructions at the [koan-engine wiki page](https://github.com/functional-koans/clojure-koan-engine/wiki/How-to-write-koans)
 - Add `lein-koan` to your project
 - `lein koan run`
 
