@@ -5,6 +5,7 @@ lein-koan is a Leiningen plugin for the [Clojure Koan Engine](https://github.com
 The plugin makes two tasks available:
 
 `lein koan run`:  watches koan files for changes and presents the user with the most advanced unsolved koan.
+
 `lein koan test`: checks that all koans fail without answers and pass with answers.
 
 ## Usage
