@@ -1,8 +1,8 @@
 (ns leiningen.koan
   (:refer-clojure :exclude (test))
-  (:use [leiningen.core :only (abort)]
+  (:use [leiningen.core.main :only (abort)]
         [leiningen.help :only (help-for)]
-        [leiningen.compile :only (eval-in-project)]))
+        [leiningen.core.eval :only (eval-in-project)]))
 
 (defn koan-help []
   (help-for "koan"))
@@ -10,7 +10,6 @@
 (defn trigger-task [project task]
   (eval-in-project project
                    `(do (koan-engine.runner/exec ~task))
-                   nil nil
                    `(do (require 'koan-engine.runner))))
 
 (defn run
