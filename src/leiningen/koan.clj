@@ -22,6 +22,11 @@
   [project]
   (trigger-task project "test"))
 
+(defn random
+  "Randomly picks a koan to solve"
+  [project]
+  (trigger-task project "random"))
+
 (defn koan
   "Koan runner for Clojure projects."
   {:help-arglists '([run test])
@@ -32,6 +37,7 @@
        "help" (abort (koan-help))
        "run"  (run project)
        "test" (test project)
+       "random" (random project)
        (abort (str subtask
                    " is not a valid option. Run "
                    "\"lein koan help\" to see your choices.")))))
