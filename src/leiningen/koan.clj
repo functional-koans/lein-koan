@@ -13,24 +13,24 @@
                    `(do (require 'koan-engine.runner))))
 
 (defn run
-  "Doc string for run."
+  "Starts the koan auto-runner (this is what most people want)"
   [project]
   (trigger-task project "run"))
 
 (defn test
-  "Doc string for test."
+  "Runs the internal tests for the koans (for koans developers!)"
   [project]
   (trigger-task project "test"))
 
 (defn random
-  "Randomly picks a koan to solve"
+  "Randomly picks a koan to solve (for after you finish the first time)"
   [project]
   (trigger-task project "random"))
 
 (defn koan
   "Koan runner for Clojure projects."
-  {:help-arglists '([run test])
-   :subtasks [#'run #'test]}
+  {:help-arglists '([run test random])
+   :subtasks [#'run #'test #'random]}
   ([project] (abort (koan-help)))
   ([project subtask]
      (case subtask
