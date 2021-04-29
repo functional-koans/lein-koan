@@ -12,7 +12,7 @@ The plugin makes two tasks available:
 
 Add the following to your `project.clj` under `:dev-dependencies`:
 
-    [lein-koan "0.1.1"]
+    [lein-koan "0.1.4"]
 
 To see the plugin in action, try out the [clojure-koans](https://github.com/functional-koans/clojure-koans) with the following commands:
 
